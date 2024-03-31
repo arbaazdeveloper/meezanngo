@@ -2,6 +2,7 @@ import React from 'react'
 import Breaker from '../../components/Breaker/Breaker'
 import imgChild from "../../assets/images/img-child.jpg"
 const Objective = () => {
+   
 
     const ObjectiveCard = ({ serial, description }) => {
         return (<>

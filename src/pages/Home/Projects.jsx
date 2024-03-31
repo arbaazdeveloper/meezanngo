@@ -7,7 +7,9 @@ import Button1 from '../../components/Buttons/Button1';
 import Breaker from '../../components/Breaker/Breaker';
 import bg3 from '../../assets/images/bg3.jpg'
 import md from '../../assets/images/img-md.jpg'
+import { useNavigate } from 'react-router-dom';
 const Projects = () => {
+    const navigate = useNavigate()
     const data = [
         {
             id: '1',
@@ -57,7 +59,7 @@ const Projects = () => {
                 width: '10px',
                 color: "white",
                 cursor: "pointer",
-                marginTop:'50px'
+                marginTop: '50px'
             };
             const style = isSelected
                 ? { ...defStyle, color: "red" }
@@ -92,16 +94,19 @@ const Projects = () => {
                         data.map((item, index) => {
                             return <>
                                 <div className='bg-[#469620] flex flex-col lg:flex-row-reverse h-[120vh] lg:h-[80vh] '>
-                                <div className='w-full lg:w-[50%]'>
+                                    <div className='w-full lg:w-[50%]'>
 
                                         <img className='w-full h-full' src={item.image} />
                                     </div>
                                     <div className='p-10  bg-white lg:w-[50%] lg:flex lg:flex-col lg:items-center lg:justify-center lg:h-full'>
+                                        <div>
+
                                         <h1 className='text-2xl font-bold'>{item.name}</h1>
                                         <p>{item.description.slice(0, 250)}...</p>
                                         <div className='w-[150px] m-auto mt-10'>
 
-                                            <Button1 text={'Read More'}></Button1>
+                                            <Button1 onClick={() => navigate('/projects')} text={'Read More'}></Button1>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>

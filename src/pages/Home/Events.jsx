@@ -27,11 +27,8 @@ const Events = () => {
             id: '3',
             name: 'Cultural Programme Holi',
             image: holi,
-            description: `Our organization took the initiative to 
-            organize a special camp in celebration of 
-            World Water Day, an occasion dedicated to 
-            highlighting the critical importance of water 
-            conservation and management`
+            description: `The NGO recently organized a vibrant and culturally enriching program celebrating the auspicious occasion of Holi, the Festival of Colors. This event aimed not only to commemorate the arrival of spring but also to promote cultural diversity, unity, and joy within the community.
+            `
         }
     ]
     const EventCard = ({image, description, name, id}) => {

@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import logo from '../../assets/images/logo.png'
 import Button1 from '../Buttons/Button1';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location=useLocation();
+
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
-
+  const isPathActive = (path) => {
+    return location.pathname === path;
+  }
   return (
     <div className="bg-white py-10 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
@@ -22,11 +26,11 @@ const Navbar = () => {
           <div className='m-auto hidden lg:block'>
             <ul className='flex gap-10'>
               <li>
-                <Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620]`} to='/'>Home</Link>
+                <Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620] ${window.location.pathname === '/' && 'text-[#469620]'}`} to='/'>Home</Link>
               </li>
-              <li><Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620]`} to='/about'>About Us</Link></li>
-              <li><Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620]`} to=''>Projects</Link></li>
-              <li><Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620]`} to=''>Events</Link></li>
+              <li><Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620] ${isPathActive('/about') && 'text-[#469620]'}`} to='/about'>About Us</Link></li>
+              <li><Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620] ${isPathActive('/projects') && 'text-[#469620]'}`} to='/projects'>Projects</Link></li>
+              <li><Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620] ${isPathActive('/events') && 'text-[#469620]'}`} to='/events'>Events</Link></li>
             </ul>
           </div>
           <div className="flex items-center lg:hidden">
@@ -51,11 +55,11 @@ const Navbar = () => {
             </button>
           </div>
           <div className='hidden lg:block'>
-          <Button1 text={'Donate Now'}/>
+            <Button1 text={'Donate Now'} />
           </div>
         </div>
       </div>
-      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar isPathActive={isPathActive} isOpen={isOpen} toggleSidebar={toggleSidebar} />
     </div>
   );
 };

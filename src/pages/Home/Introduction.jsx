@@ -2,8 +2,10 @@ import React from 'react'
 import bg1 from '../../assets/images/intro.jpg'
 import Breaker from '../../components/Breaker/Breaker'
 import Button1 from '../../components/Buttons/Button1'
+import { useNavigate } from 'react-router-dom'
 
 const Introduction = () => {
+    const navigate=useNavigate()
     return (
         <div className='flex flex-col lg:flex-row gap-10 w-[90%] lg:w-[80%] m-auto mt-20 lg:h-[80vh] lg:items-center'>
             <div className='w-full lg:w-[50%]'>
@@ -27,7 +29,10 @@ const Introduction = () => {
                 </p>
                 <div className='mt-[30px]'>
 
-                <Button1 className='' text={'Learn More'}></Button1>
+                <Button1 text={'Learn More'} onClick={()=>{
+                   
+                   navigate('/about')
+               }} />
                 </div>
             </div>
 

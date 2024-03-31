@@ -1,7 +1,8 @@
 // Sidebar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = ({ isOpen, toggleSidebar,isPathActive }) => {
   return (
     <div className={`fixed inset-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>
       <div className="absolute inset-0 bg-gray-600 opacity-50" onClick={toggleSidebar}></div>
@@ -10,12 +11,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <div className='w-full flex justify-end '>
             <ul className='flex gap-10 flex-col items-end justify-end w-full '>
               <li>
-                <a className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b]`} href=''>Home</a>
+                <Link className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/') && 'text-[#fdd65b]'}`} to='/'>Home</Link>
               </li>
-              <li><a className={`font-bold  text-3xl  text-white  transition-all duration-100 hover:text-[#fdd65b]`} href=''>About Us</a></li>
-              <li><a className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b]`} href=''>Projects</a></li>
-              <li><a className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b]`} href=''>Events</a></li>
-              <li><a className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b]`} href=''>Donation</a></li>
+              <li><Link className={`font-bold  text-3xl  text-white  transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/about') && 'text-[#fdd65b]'}`} to='/about'>About Us</Link></li>
+              <li><Link className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/project') && 'text-[#fdd65b]'}`} to='/projects'>Projects</Link></li>
+              <li><Link className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/events') && 'text-[#fdd65b]'}`} to='/events'>Events</Link></li>
+              <li><Link className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/donation') && 'text-[#fdd65b]'}`} to=''>Donation</Link></li>
             </ul>
           </div>
       </div>

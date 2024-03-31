@@ -4,8 +4,8 @@ import Navbar from './components/Navbar/Navbar'
 import Home from './pages/Home/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+//https://goodheart.sva.la-studioweb.com/
   return (
     <>
    <Navbar/>

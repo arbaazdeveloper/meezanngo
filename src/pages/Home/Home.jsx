@@ -4,6 +4,7 @@ import Introduction from './Introduction'
 import Vision from './Vision'
 import Objective from './Objective'
 import Projects from './Projects'
+import Events from './Events'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Vision/>
         <Objective/>
         <Projects/>
+        <Events/>
     </div>
   )
 }

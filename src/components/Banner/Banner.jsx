@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import bg1 from '../../assets/images/bg1.jpg';
 import bg2 from '../../assets/images/bg2.jpg';
 import bg3 from '../../assets/images/bg3.jpg';
+import set from '../../assets/images/set.jpg'
 import Button1 from '../Buttons/Button1';
 const Banner = () => {
     const [bgIndex, setBgIndex] = useState(0);
-    const images = [bg1, bg2, bg3]; // Paths to your images
+    const images = [set, bg2, bg3]; 
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -13,7 +14,7 @@ const Banner = () => {
         }, 5000); // Change image every 5 seconds
 
         return () => clearInterval(interval);
-    }, []); // Run only once on component mount
+    }, []); 
 
     return (
         <div className="relative overflow-hidden h-[80vh] md:h-96 lg:h-screen">
@@ -21,15 +22,20 @@ const Banner = () => {
             {images.map((image, index) => (
                 <div
                     key={index}
-                    className={`absolute inset-0 bg-cover bg-center transition-opacity duration-2000 w-full ${bgIndex === index ? 'opacity-100 animate-zoom' : 'opacity-0'
+                    className={`absolute inset-0 bg-cover bg-center   transition-opacity duration-2000 w-full ${bgIndex === index ? 'opacity-100 animate-zoom' : 'opacity-0'
                         }`}
                     style={{ backgroundImage: `url(${image})` }}
-                ></div>
+                    
+                >
+                      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                </div>
             ))}
             {/* Banner content */}
-            <div className="absolute inset-0 flex items-center ">
-                <div className='flex flex-col px-20 '>
-                    <h1 className="text-white text-5xl md:text-5xl lg:text-7xl font-bold">Help Other For Better Unity</h1>
+            <div className="absolute inset-0 flex border">
+                <div className='flex flex-col justify-center px-5'>
+                    <p className='text-white uppercase text-sm lg:mt-5 lg:text-md'>Non Profit Origization</p>
+                    <h1 className="text-white text-2xl md:text-5xl lg:text-7xl font-bold">Mezaan Education Welafare Society</h1>
+                    <p className='text-white uppercase font-semibold lg:mt-5 lg:text-xl'>Help Others for better unity</p>
                     <div className='hidden lg:flex lg:w-[200px] mt-10'>
                         <Button1 text={'Learn More'} />
                     </div>

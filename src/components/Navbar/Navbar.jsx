@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import logo from '../../assets/images/logo.png'
+import Button1 from '../Buttons/Button1';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -9,14 +11,25 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white py-4">
+    <div className="bg-white py-10 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center">
+        <div className="flex justify-between items-center lg:justify-start">
+          <div className="flex items-center gap-1">
             <img src={logo} alt="Logo" className="h-8" />
-            <h1 className='text-lg font-extrabold text-[#171717] uppercase lg:text-2xl'>Mezaan Education Welfare Society</h1>
+            <h1 className='text-lg font-extrabold text-[#171717] uppercase lg:text-2xl'>MEWS</h1>
           </div>
-          <div className="flex items-center">
+
+          <div className='m-auto hidden lg:block'>
+            <ul className='flex gap-10'>
+              <li>
+                <Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620]`} to='/'>Home</Link>
+              </li>
+              <li><Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620]`} to='/about'>About Us</Link></li>
+              <li><Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620]`} to=''>Projects</Link></li>
+              <li><Link className={`font-bold text-lg transition-all duration-100 hover:text-[#469620]`} to=''>Events</Link></li>
+            </ul>
+          </div>
+          <div className="flex items-center lg:hidden">
             <button
               onClick={toggleSidebar}
               className="text-gray-500 hover:text-white focus:outline-none focus:text-white"
@@ -36,6 +49,9 @@ const Navbar = () => {
                 />
               </svg>
             </button>
+          </div>
+          <div className='hidden lg:block'>
+          <Button1 text={'Donate Now'}/>
           </div>
         </div>
       </div>

@@ -96,7 +96,7 @@ const Projects = () => {
 
                                         <img className='w-full h-full' src={item.image} />
                                     </div>
-                                    <div className='p-10 bg-white lg:w-[50%] lg:flex lg:flex-col lg:items-center lg:justify-center lg:h-full'>
+                                    <div className='p-10  bg-white lg:w-[50%] lg:flex lg:flex-col lg:items-center lg:justify-center lg:h-full'>
                                         <h1 className='text-2xl font-bold'>{item.name}</h1>
                                         <p>{item.description.slice(0, 250)}...</p>
                                         <div className='w-[150px] m-auto mt-10'>

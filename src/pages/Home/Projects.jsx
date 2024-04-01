@@ -49,6 +49,8 @@ const Projects = () => {
         swipeable: true,
         emulateTouch: true,
         autoPlay: true,
+        swipeScrollTolerance:50,
+        preventMovementUntilSwipeScrollTolerance:true,
         renderIndicator: (onClickHandler, isSelected, index, label) => {
             const defStyle = {
                 marginLeft: 20,

@@ -13,7 +13,10 @@ const Footer = () => {
         <div className='w-full bg-[#171717] p-5 py-10 mt-10 relative bottom-0'>
             <div className='w-full flex flex-col justify-center items-center lg:flex-row lg:justify-around gap-4'>
                 <div className='text-center'>
-                    <img className='m-auto my-10' src={logo} />
+                    <div className='w-20 h-20 bg-white rounded-full m-auto my-10'>
+
+                    <img className='m-auto' src={logo} />
+                    </div>
 
                     <h1 className='text-2xl font-extrabold text-white uppercase lg:text-2xl my-10'>Mezaan Education Welfare Society</h1>
                     <p className='text-white my-10'>We Truly believe in unity </p>

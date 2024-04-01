@@ -67,7 +67,7 @@ export const eventData = [
     },
     {
         id: '5',
-        name: 'Special Sessions to Raise Awareness About  Government Schemes for Women',
+        name: `Unlocking Opportunities The Path to Learning and Earning`,
         image: grow,
         description: `Our organization hosts special empowerment sessions tailored for women, aimed at 
         equipping them with the skills and knowledge necessary to thrive in today's competitive 

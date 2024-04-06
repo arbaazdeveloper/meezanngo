@@ -21,7 +21,7 @@ const Footer = () => {
                         <img className='m-auto' src={logo} />
                     </div>
 
-                    <h1 className='text-2xl font-extrabold text-white uppercase lg:text-2xl my-10'>Mezaan Education Welfare Society</h1>
+                    <h1 className='text-2xl font-extrabold text-white uppercase lg:text-2xl my-10'>Meezan Education Welfare Society</h1>
                     <p className='text-white my-10'>We Truly believe in unity </p>
                     <div className='w-[200px] m-auto mt-[10px] my-10'>
                         <Button1 onClick={() => navigate('/donation')} text={'Donate Now'} />
@@ -30,7 +30,7 @@ const Footer = () => {
                 <div className='text-center flex flex-col justify-center items-center'>
 
                     <h1 className='text-lg font-bold text-white my-10'>Contact Us</h1>
-                    <p className='text-[#5c5c5c] my-5'>Ashoka Garden Bhopal</p>
+                    <p className='text-[#5c5c5c] my-5'>Ashoka Garden , Bhopal M.P</p>
                     <p className='text-[#5c5c5c] my-5'>meezanngo03@gmail.com</p>
                     <p className='text-[#5c5c5c] my-5'>+91 70679 90428</p>
 

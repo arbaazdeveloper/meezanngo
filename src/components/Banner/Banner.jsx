@@ -35,7 +35,7 @@ const Banner = () => {
             <div className="absolute inset-0 flex border">
                 <div className='flex flex-col justify-center px-5'>
                     <p className='text-white uppercase text-sm lg:mt-5 lg:text-md'>Non Profit Origization</p>
-                    <h1 className="text-white text-2xl md:text-5xl lg:text-7xl font-bold">Mezaan Education Welfare Society</h1>
+                    <h1 className="text-white text-2xl md:text-5xl lg:text-7xl font-bold">Meezan Education Welfare Society</h1>
                     <p className='text-white uppercase font-semibold lg:mt-5 lg:text-xl'>Help Others for better unity</p>
                     <div className='hidden lg:flex lg:w-[200px] mt-10'>
                     <Button1 text={'Learn More'} onClick={()=>{

@@ -78,7 +78,7 @@ function Donation() {
 
             </div>
             <div className='w-[90%] lg:w-[80%] m-auto mt-10 flex flex-col justify-center items-center gap-10'>
-            <h1 className='text-5xl font-bold mt-[30px] mb-[30px]'>Frequently Asked Questions</h1>
+            <h1 className='text-5xl font-bold mt-[30px] mb-[30px] text-center'>Frequently Asked Questions</h1>
                 <Breaker/>
                 <Faqs />
             </div>

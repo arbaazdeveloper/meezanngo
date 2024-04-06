@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import bg1 from '../../assets/images/bg1.jpg';
 import bg2 from '../../assets/images/bg2.jpg';
 import bg3 from '../../assets/images/bg3.jpg';
 import set from '../../assets/images/set.jpg'
+import edu2 from '../../assets/images/edu2.jpg'
 import Button1 from '../Buttons/Button1';
 import { useNavigate } from 'react-router-dom';
 const Banner = () => {
     const [bgIndex, setBgIndex] = useState(0);
-    const images = [set, bg2, bg3];
+    const images = [edu2,set, bg2, bg3];
 
     useEffect(() => {
         const interval = setInterval(() => {

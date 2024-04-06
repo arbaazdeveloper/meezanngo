@@ -3,6 +3,8 @@ import child from '../../assets/images/img-child.jpg'
 import edu from '../../assets/images/edu1.jpg'
 import md from '../../assets/images/img-md.jpg'
 import beauty from '../../assets/images/beauty.jpg'
+import food from '../../assets/images/food.jpg'
+import blanket from '../../assets/images/blanket.jpg'
 export const projectData = [
     {
         id: '1',
@@ -18,7 +20,7 @@ export const projectData = [
         but also acquire valuable vocational skills that can lead to sustainable livelihoods.`
     },
     {
-        id: '3',
+        id: '2',
         name: 'Promoting Educational Engagement Among Children',
         image: child,
         description: `Our NGO is dedicated to fostering a culture of educational engagement 
@@ -72,5 +74,20 @@ export const projectData = [
           From mastering hair styling and makeup application to learning skincare treatments
            and nail artistry, our classes offer comprehensive training that prepares women for success 
            in the competitive beauty sector. Through these courses, we aim to not only enhance the participants' technical abilities but also instill confidence and professionalism, empowering them to pursue fulfilling careers and achieve financial independence.`
+    },
+    {
+        id:'6',
+        name:'Annual Food Distribution Camp',
+        image:food,
+        description:`We organize annual food distribution campaigns aimed at providing nutritious meals to those in need. Our efforts focus on ensuring that individuals facing food insecurity have access to meals rich in essential nutrients. By conducting these campaigns regularly, we strive to alleviate hunger and promote better health within our communities."
+
+        This summary highlights the NGO's commitment to addressing food insecurity by distributing nutritious meals and emphasizes the recurring nature of their food distribution initiatives.`
+    },
+    {
+        id:'7',
+        name:'Blanket Distribution Initiatives',
+        image:blanket,
+        description:`Our organization spearheads blanket distribution initiatives targeting vulnerable populations, including homeless individuals, impoverished families, and marginalized communities. These efforts aim to provide warmth and protection during cold seasons, ensuring that no one is left exposed to harsh weather conditions. By fostering compassion and solidarity, we strive to alleviate the suffering of those in need and promote a culture of caring and support within society.`
+
     }
 ]

@@ -2,8 +2,12 @@ import React from 'react'
 import { projectData } from '../../utils/constant/projectData'
 import project from '../../assets/images/projects.jpg'
 import Breaker from '../../components/Breaker/Breaker'
+import { useNavigate } from 'react-router-dom'
 const Projects = () => {
-   
+    const navigate = useNavigate();
+    const navigateOrigin = (id, type) => {
+        navigate(`/learnmore/${type}/${id}`)
+    }
     const EventCard = ({image, description, name, id}) => {
         return (
             <div className='hover:shadow-md rounded-sm w-full group'>
@@ -15,7 +19,7 @@ const Projects = () => {
                     <h1 className='text-2xl font-bold '>{name}</h1>
                     <p> {description?.slice(0,300)}....</p>
 
-                    <button className='bg-white border p-2 border-[#000] w-[200px] font-semibold uppercase hover:shadow-lg hover:bg-[#469620] hover:text-white' style={{
+                    <button onClick={()=>navigateOrigin(id,'projects')} className='bg-white border p-2 border-[#000] w-[200px] font-semibold uppercase hover:shadow-lg hover:bg-[#469620] hover:text-white' style={{
                         '--tw-shadow': '5px 5px 0px 0px rgba(0, 0, 0, 1)'
                     }}>Read More</button>
                 </div>

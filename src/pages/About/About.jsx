@@ -11,7 +11,10 @@ import aware from '../../assets/images/aware.jpg'
 import collage from '../../assets/images/collage.jpg'
 import connect from '../../assets/images/connect.svg'
 import heart from '../../assets/images/heart.svg'
+import { useNavigate } from 'react-router-dom'
 export const About = () => {
+  const navigate=useNavigate()
+  const navigateToProjects=()=>{navigate('/projects')}
   const IntroCard = ({ name, description, image }) => {
     return (
       <div className='p-10 w-[90%] lg:w-[350px] flex flex-col gap-10 shadow-lg hover:bg-[#469620] transition-all duration-200 hover:text-white group'>
@@ -20,9 +23,9 @@ export const About = () => {
         </div>
         <h1 className='text-2xl font-bold '>{name}</h1>
         <p className='text-xl'>{description.slice(0,300)}...</p>
-        <button className='bg-white border p-2 border-[#000] w-[200px] font-semibold uppercase hover:shadow-lg hover:bg-[#469620] hover:text-white group-hover:bg-[#fdd65b]' style={{
+        <button onClick={navigateToProjects} className='bg-white border p-2 border-[#000] w-[200px] font-semibold uppercase hover:shadow-lg hover:bg-[#469620] hover:text-white group-hover:bg-[#fdd65b]' style={{
           '--tw-shadow': '5px 5px 0px 0px rgba(0, 0, 0, 1)'
-        }}>Read More</button>
+        }}>Learn More</button>
       </div>
     )
   }
@@ -39,7 +42,7 @@ export const About = () => {
             <h1 className='text-2xl font-bold'>{title}</h1>
             <p>{text}...</p>
             <div className='w-[150px] m-auto mt-10'>
-              <Button1 text={'Read More'}></Button1>
+              <Button1 onClick={navigateToProjects} text={'Learn More'}></Button1>
             </div>
           </div>
         </div>

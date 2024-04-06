@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import logo from '../../assets/images/logo.png'
 import Button1 from '../Buttons/Button1';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location=useLocation();
+  const navigate=useNavigate()
 
 
   const toggleSidebar = () => {
@@ -14,12 +15,13 @@ const Navbar = () => {
   const isPathActive = (path) => {
     return location.pathname === path;
   }
+
   return (
     <div className="bg-white py-10 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center lg:justify-start">
-          <div className="flex items-center gap-1">
-            <img src={logo} alt="Logo" className="h-8" />
+          <div className="flex items-center gap-1 cursor-pointer" onClick={()=>navigate('/')}>
+            <img src={logo} alt="Logo" className="h-8 lg:h-10" />
             <h1 className='text-lg font-extrabold text-[#171717] uppercase lg:text-2xl'>MEWS</h1>
           </div>
 
@@ -55,7 +57,7 @@ const Navbar = () => {
             </button>
           </div>
           <div className='hidden lg:block'>
-            <Button1 text={'Donate Now'} />
+            <Button1 onClick={()=>navigate('/donation')} text={'Donate Now'} />
           </div>
         </div>
       </div>

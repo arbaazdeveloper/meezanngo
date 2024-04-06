@@ -3,7 +3,9 @@ import Breaker from '../../components/Breaker/Breaker'
 import medical from '../../assets/images/medical.jpg'
 import waterday from '../../assets/images/waterday.jpg'
 import holi from '../../assets/images/holi.jpg'
+import { useNavigate } from 'react-router-dom'
 const Events = () => {
+    const navigate=useNavigate()
     const data = [
         {
             id: '1',
@@ -42,7 +44,7 @@ const Events = () => {
                     <h1 className='text-2xl font-bold '>{name}</h1>
                     <p> {description}....</p>
 
-                    <button className='bg-white border p-2 border-[#000] w-[200px] font-semibold uppercase hover:shadow-lg hover:bg-[#469620] hover:text-white' style={{
+                    <button onClick={()=>navigate('/events')} className='bg-white border p-2 border-[#000] w-[200px] font-semibold uppercase hover:shadow-lg hover:bg-[#469620] hover:text-white' style={{
                         '--tw-shadow': '5px 5px 0px 0px rgba(0, 0, 0, 1)'
                     }}>Read More</button>
                 </div>

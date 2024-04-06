@@ -20,7 +20,7 @@ const Sidebar = ({ isOpen, toggleSidebar,isPathActive }) => {
               <li><Link onClick={toggleSidebar} className={`font-bold  text-3xl  text-white  transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/about') && 'text-[#fdd65b]'}`} to='/about'>About Us</Link></li>
               <li><Link onClick={toggleSidebar} className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/project') && 'text-[#fdd65b]'}`} to='/projects'>Projects</Link></li>
               <li><Link onClick={toggleSidebar} className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/events') && 'text-[#fdd65b]'}`} to='/events'>Events</Link></li>
-              <li><Link onClick={toggleSidebar} className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/donation') && 'text-[#fdd65b]'}`} to=''>Donation</Link></li>
+              <li><Link onClick={toggleSidebar} className={`font-bold text-3xl  text-white transition-all duration-100 hover:text-[#fdd65b] ${isPathActive('/donation') && 'text-[#fdd65b]'}`} to='/donation'>Donation</Link></li>
             </ul>
           </div>
       </div>
